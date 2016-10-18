@@ -1,0 +1,33 @@
+{
+  "name": "electron-windows-autoupdate",
+  "version": "1.0.0",
+  "description": "Electron Windows auto update example",
+  "main": "index.js",
+  "scripts": {
+    "start": "electron .",
+    "build": "build --win",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "build": {
+    "remoteReleases": "./"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vojtatranta/electron-windows-autoupdate.git"
+  },
+  "keywords": [
+    "Electron",
+    "Windows",
+    "autoupdate"
+  ],
+  "author": "Vojtech Tranta <vojta.tranta@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vojtatranta/electron-windows-autoupdate/issues"
+  },
+  "homepage": "https://github.com/vojtatranta/electron-windows-autoupdate#readme",
+  "devDependencies": {
+    "electron": "^1.4.3",
+    "electron-builder": "^7.14.1"
+  }
+}

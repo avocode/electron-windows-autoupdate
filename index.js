@@ -27,3 +27,12 @@ app.on('activate', () => {
     createWindow()
   }
 })
+
+const squirrelCommand = process.argv[1]
+  switch (squirrelCommand) {
+    case '--squirrel-install':
+    case '--squirrel-updated':
+    case '--squirrel-obsolete':
+      app.quit()
+      return true
+  }

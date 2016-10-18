@@ -9,7 +9,13 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "build": {
-    "remoteReleases": "./"
+    "squirrelWindows": {
+      "remoteReleases": "http://localhost:9000/"
+    },
+    "win": {
+      "certificateFile": "/Users/vojtatranta/my_signing_key.pfx",
+      "certificatePassword": "barbarbar"
+    }
   },
   "repository": {
     "type": "git",

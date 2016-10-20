@@ -10,11 +10,11 @@
   },
   "build": {
     "squirrelWindows": {
-      "remoteReleases": "http://localhost:9000/"
+      "remoteReleases": "http://localhost:9000/dist/win1/"
     },
     "win": {
-      "certificateFile": "/Users/vojtatranta/my_signing_key.pfx",
-      "certificatePassword": "barbarbar"
+      "certificateFile": "./certs/my_signing_key.pfx",
+      "certificatePassword": ""
     }
   },
   "repository": {

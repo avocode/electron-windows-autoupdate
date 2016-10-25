@@ -7,7 +7,7 @@ In this repository is everything you need to have in order to make Windows Auto 
 Which is:
 - Electron
 - Electron packager (builder), I use `electron-builder` which can build all the platform just on Mac
-- Some [index.html(index.html) file that Electron can load and where it boots `electorn.autoUpdater`
+- Some [index.html](index.html) file that Electron can load and where it boots `electorn.autoUpdater`
 
 ## Behind the scenes
 We don't quite need to know much about how this works behind the scenes but just to clarify some terms.

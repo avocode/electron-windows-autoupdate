@@ -1,3 +1,4 @@
+![Electron windows autoupdate](https://daks2k3a4ib2z.cloudfront.net/575a64b411eec78e2b2e9461/580f26fa5f425a295506f837_blog-title-electron-win.jpg)
 # Get that God damn Windows Auto Update working on Electron!
 Yes, this is what this repository is about!
 

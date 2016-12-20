@@ -32,6 +32,11 @@ It is a simply list of available app versions with checksums and names of `*.nup
 
 ## Let's do this
 Alright, first. Make sure you already are on Windows machine and if not, just download and install Wine - [Mac guide here](https://www.davidbaumgold.com/tutorials/wine-mac/).
+You will also need to install mono which can be installed through homebrew.
+
+```
+brew install mono
+```
 
 Once you are ready with this, you can install this repo:
 ```
@@ -61,7 +66,7 @@ Note that `electron-builder` uses `package.json` to configurate the build, and s
 //lets do the build again
 npm run build
 ```
-No should everything go OK. You may have troubles with Wine make sure you did steps described above.
+Now everything should go OK. You may have troubles with Wine. Make sure you did the steps described above.
 
 **NOTE** that in `package.json` this part:
 ```
@@ -70,10 +75,10 @@ No should everything go OK. You may have troubles with Wine make sure you did st
   "certificatePassword": ""
 }
 ```
-I generated dummy certificates to sign this app, if you won't provide these files, autoUpdate will not work!
+I generated dummy certificates to sign this app, if you don't provide these files, autoUpdate will not work!
 Replace these lines with your own certificate info. Guide to generate such certificates is here: [https://www.npmjs.com/package/electron-installer-windows](https://www.npmjs.com/package/electron-installer-windows) 
 
-So what do we have now? Well, in `dist/win` there is something like `electron-windows-autoupdate-1.0.0-full.nupkg` which is packed binary.
+So what do we have now? Well, in `dist/win` there is something like `electron-windows-autoupdate-1.0.0-full.nupkg` which is a packed binary.
 Along with `electron-windows-autoupdate Setup 1.0.0` which is Windows installer of our App. Great.
 
 If you don't like the file names, just change `name` key in [package.json](package.json), so that it suits your needs.
@@ -91,7 +96,7 @@ shipped on `Mac` as well as on `Linux` and `Windows` if you download `python`. Y
 So firstly. Rename `dist/win` to some other name I use `dist/win1`. The reason for renaming is that the `electron-builder` will overwrite folder `dist/win`
 with all it's content and we want to keep it for auto update, so renaming make sure that everything is OK.
 
-Than just:
+Then just:
 ```
 // start server here
 python -m SimpleHTTPServer 9000
@@ -106,7 +111,7 @@ open http://localhost:9000/dist/win1/RELEASES
 ```
 It should open `RELEASES` in the browser, maybe it downloads it. Anyway everything but `404` is OK.
 
-So now we have to tell `Squirrel` that we already have some versions of our app built and we want another version to be and update of older ones.
+So now we have to tell `Squirrel` that we already have some versions of our app built and we want another version to be an update of older ones.
 
 To do that, just **bump version** in [package.json](package.json) to eg. `2.0.0`.
 If you won't bump version, new build will not be an update of previous version.

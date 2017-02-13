@@ -18,7 +18,7 @@ You need a installer because just bold `.exe` files cannot be auto update with E
 
 Of course `Squirrel` is a Windows application, that's why you still need some runtime. On Linux or Mac you can simply use Wine.
 
-I would this perfect tutorial how to install Wine on the mac via `brew`: [https://www.davidbaumgold.com/tutorials/wine-mac/](https://www.davidbaumgold.com/tutorials/wine-mac/).
+I would follow this perfect tutorial on how to install Wine on the mac via `brew`: [https://www.davidbaumgold.com/tutorials/wine-mac/](https://www.davidbaumgold.com/tutorials/wine-mac/).
 
 The update process itself is based on `.nupkg` packages which is a binary format similar to `.zip` and holds source code of your application.
 
